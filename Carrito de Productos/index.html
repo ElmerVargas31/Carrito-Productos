@@ -1,0 +1,87 @@
+<!--
+    Estudiante: Elmer Vargas Salazar
+    Curso: Desarrollo de Aplicaciones Web Dinámicas con Javascript
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Productos</title>
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--ESTILOS CSS-->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!--ENCABEZADO-->
+    <header class="encab">
+        <h1>Elmer Vargas Salazar</h1>
+    </header>
+
+    <!--MENÚ DE NAVEGACIÓN-->
+    <nav class="navbar fondo">
+        <div class="navbar-brand letra">
+            Aplicación para añadir y mostrar información de productos
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!--APLICACIÓN-->
+        <div id="App" class="row pt-5">
+            
+            <!--FORMULARIO AÑADIR PRODUCTOS-->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Agrega un Producto</h4>
+                    </div>
+                    <form id="form_prod" class="card-body">
+                        <!--Campos de Formulario-->
+                        <div class="form-group">
+                            <input type="text" id="nombre" placeholder="Nombre" 
+                            class="form-control input">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="marca" placeholder="Marca" 
+                            class="form-control input">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" step="0.01" id="precio" placeholder="Precio" 
+                            class="form-control input"> <!-- step = Permite al input aceptar valor con decimales -->
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="cantidad" placeholder="Cantidad" 
+                            class="form-control input">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="fecha" placeholder="Año" value="2021" 
+                            min="2000" max="2030" class="form-control input">
+                        </div>
+                        
+                        <!--Botón de Guardar-->
+                        <input type="submit" value="Guardar" class="btn btn-block fondo letra">
+                    </form>
+                </div>
+            </div><!--FIN FORMULARIO AÑADIR PRODUCTOS-->
+
+            <!--MOSTRAR LISTA DE PRODUCTOS-->
+            <div id="lista_prod" class="col-md-8">
+
+            </div><!--FIN MOSTRAR LISTA DE PRODUCTOS-->
+            
+        </div><!--FIN DE LA APLICACIÓN-->
+
+    </div><!--FIN DE CONTAINER-->
+
+    <!--PIE DE PÁGINA-->
+    <footer class="pie">
+        <h6>Viernes 22 de enero, 2021</h6>
+        <h6>Desarrollo de Aplicaciones Web Dinámicas con Javascript</h6>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
